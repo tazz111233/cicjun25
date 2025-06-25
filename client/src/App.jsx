@@ -8,7 +8,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   const fetchFeedback = async () => {
-    const res = await fetch("http://localhost:4000/feedback");
+    const res = await fetch("https://cicjun25.onrender.com/feedback");
     const data = await res.json();
     //console.log(data);
     setFeedbacks(data);
@@ -18,7 +18,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:4000/feedback/sending" , {
+    await fetch("https://cicjun25.onrender.com/feedback/sending" , {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({name,message}),
