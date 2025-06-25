@@ -6,6 +6,7 @@ function App() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const temp= 0;
 
   const fetchFeedback = async () => {
     const res = await fetch("https://cicjun25.onrender.com/feedback");
